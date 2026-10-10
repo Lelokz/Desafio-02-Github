@@ -1,4 +1,5 @@
 .profile {
+  animation: result-in 0.4s ease-out both;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -18,7 +19,14 @@
   height: 220px;
   border: 2px solid #005cff;
   border-radius: 50%;
+  background-color: #c4c4c4;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile__avatar.is-loaded {
+  opacity: 1;
 }
 
 .profile__name {
@@ -26,6 +34,15 @@
   font-weight: 700;
   line-height: 27px;
   color: #005cff;
+}
+
+.profile__info {
+  min-width: 0;
+}
+
+.profile__name,
+.profile__bio {
+  overflow-wrap: anywhere;
 }
 
 .profile__bio {
@@ -49,4 +66,23 @@
 .profile__bio--empty {
   font-style: italic;
   color: #4f4f4f;
+}
+
+@media (max-width: 760px) {
+  .profile {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 28px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .profile__avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile__bio {
+    margin-top: 12px;
+  }
 }

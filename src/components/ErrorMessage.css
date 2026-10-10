@@ -1,4 +1,5 @@
 .error {
+  animation: result-in 0.4s ease-out both;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,4 +17,16 @@
   line-height: 27px;
   text-align: center;
   color: #ff0000;
+}
+
+@media (max-width: 600px) {
+  .error {
+    margin-top: 28px;
+    padding: 16px;
+  }
+
+  .error__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

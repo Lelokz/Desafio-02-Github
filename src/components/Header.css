@@ -20,3 +20,37 @@
   height: auto;
   margin-left: 15px;
 }
+
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .header__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .header__wordmark {
+    width: 107px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .header__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header__wordmark {
+    width: 86px;
+  }
+}

@@ -1,4 +1,5 @@
 .loader {
+  animation: result-in 0.3s ease-out both;
   display: flex;
   justify-content: center;
   margin-top: 60px;

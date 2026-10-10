@@ -40,6 +40,19 @@
   border-radius: 10px;
   background-color: #005cff;
   cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.search__button:active {
+  transform: scale(0.94);
+}
+
+.search__button img {
+  transition: transform 0.2s;
+}
+
+.search__button:hover img {
+  transform: scale(1.1);
 }
 
 .search__button:hover {
@@ -49,4 +62,22 @@
 .search__button:focus-visible {
   outline: 3px solid rgba(0, 92, 255, 0.45);
   outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .search__input {
+    height: 54px;
+    padding-right: 66px;
+    font-size: 16px;
+  }
+
+  .search__button {
+    width: 54px;
+    height: 54px;
+  }
+
+  .search__button img {
+    width: 22px;
+    height: 22px;
+  }
 }

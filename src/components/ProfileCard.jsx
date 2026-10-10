@@ -1,11 +1,15 @@
+import { useState } from 'react'
 import './ProfileCard.css'
 
 function ProfileCard({ profile }) {
+  const [avatarLoaded, setAvatarLoaded] = useState(false)
+
   return (
     <article className="profile">
       <img
-        className="profile__avatar"
+        className={`profile__avatar${avatarLoaded ? ' is-loaded' : ''}`}
         src={profile.avatarUrl}
+        onLoad={() => setAvatarLoaded(true)}
         alt={`Foto de perfil de ${profile.name}`}
         width="220"
         height="220"

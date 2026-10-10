@@ -61,3 +61,46 @@
   top: -109px;
   left: -71px;
 }
+
+/* Abaixo da largura do layout, a luz da esquerda alcançaria o conteúdo do
+   card; ela passa para trás dele para não escurecer a caixa do perfil */
+@media (max-width: 1240px) {
+  .glow--left {
+    z-index: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    place-items: start center;
+    padding: 72px 12px 40px;
+  }
+
+  .card {
+    min-height: 0;
+    padding: 36px 16px 32px;
+  }
+
+  /* Luzes e pontos acompanham o card menor */
+  .glow--top {
+    top: -260px;
+    left: auto;
+    right: -360px;
+    width: 560px;
+    height: 560px;
+  }
+
+  .glow--left {
+    top: 180px;
+    left: -330px;
+    width: 420px;
+    height: 420px;
+  }
+
+  .dots {
+    top: -60px;
+    left: -40px;
+    width: 160px;
+    height: auto;
+  }
+}
