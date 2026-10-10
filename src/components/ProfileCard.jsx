@@ -11,8 +11,16 @@ function ProfileCard({ profile }) {
         height="220"
       />
       <div className="profile__info">
-        <h2 className="profile__name">{profile.name}</h2>
-        <p className="profile__bio">{profile.bio}</p>
+        <h2 className="profile__name">
+          <a href={profile.profileUrl} target="_blank" rel="noreferrer">
+            {profile.name}
+          </a>
+        </h2>
+        {profile.bio ? (
+          <p className="profile__bio">{profile.bio}</p>
+        ) : (
+          <p className="profile__bio profile__bio--empty">Este usuário ainda não escreveu uma bio.</p>
+        )}
       </div>
     </article>
   )

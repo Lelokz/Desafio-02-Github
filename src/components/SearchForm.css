@@ -42,6 +42,11 @@
   cursor: pointer;
 }
 
-.search__button:disabled {
-  cursor: progress;
+.search__button:hover {
+  background-color: #004ad0;
+}
+
+.search__button:focus-visible {
+  outline: 3px solid rgba(0, 92, 255, 0.45);
+  outline-offset: 2px;
 }
